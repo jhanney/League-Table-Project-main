@@ -4,13 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton } from '@ionic/angular/standalone';
 import { LeagueService } from '../league.service';
 
-
 @Component({
   selector: 'app-premier-league-table',
   templateUrl: './premier-league-table.page.html',
   styleUrls: ['./premier-league-table.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton,]
 })
 export class PremierLeagueTablePage implements OnInit {
 
@@ -22,6 +21,7 @@ export class PremierLeagueTablePage implements OnInit {
 
   
   ngOnInit() {
+    this.loadStandings(); //load the table
   }
 
   loadStandings(){

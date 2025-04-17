@@ -18,15 +18,13 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12" size-md="6" size-lg="3" *ngFor="let league of leagues">
-          <ion-router-link [routerLink]="[league.route]" style="text-align: center; display: block;">
-            <ion-card>
+          <ion-card [routerLink]="[league.route]" style="text-align: center; display: block;">
               <img [src]="league.image" alt="{{ league.name }}" style="width: 100%; height: auto; cursor: pointer;" />
               <ion-card-header>
                 <ion-card-subtitle>{{ league.country }}</ion-card-subtitle>
                 <ion-card-title>{{ league.name }}</ion-card-title>
               </ion-card-header>
             </ion-card>
-          </ion-router-link>
         </ion-col>
       </ion-row>
     </ion-grid>
