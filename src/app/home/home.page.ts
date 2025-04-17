@@ -10,6 +10,7 @@ import { LeagueService } from '../league.service';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  standalone: true, 
   imports: [IonHeader, IonToolbar, IonButton, RouterLink, IonCardTitle, IonCardSubtitle, IonTitle, IonContent, CommonModule, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonImg, IonLabel],
 })
 export class HomePage {
@@ -18,6 +19,7 @@ export class HomePage {
     { id: 3, name: 'La Liga', image: 'assets/images/la-liga.png', country: 'Spain', route: '/la-liga-table' },
     { id: 4, name: 'Serie A', image: 'assets/images/serie-a.jpg', country: 'Italy', route: '/serie-a-table' }];
   
-
+constructor(private leagueService : LeagueService){ //handles API call
+}
  
 }
