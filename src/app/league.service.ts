@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LeagueService {
-
-  private apiUrl = 'https://api.football-data.org/v4/competitions/'; // Base URL for Football Data API
+  private apiUrl = '/api/competitions/'; //proxied
 
   constructor(private http: HttpClient) {}
 
