@@ -29,7 +29,7 @@ export class LaLigaTablePage implements OnInit {
       this.errorMessage = ''; 
   
       //get standings for PL
-      this.leagueService.getStandings('PL').subscribe({
+      this.leagueService.getStandings('PD').subscribe({
         next: (response) => {
           console.log('Response from API', response); //log API response for debug
   
