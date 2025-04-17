@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonCardContent,IonBackButton,IonButtons,IonSpinner } from '@ionic/angular/standalone';
 import { LeagueService } from '../league.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LeagueService } from '../league.service';
   templateUrl: './bundesliga-table.page.html',
   styleUrls: ['./bundesliga-table.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,  IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonCardContent,IonBackButton,IonButtons,IonSpinner]
 })
 export class BundesligaTablePage implements OnInit {
 
