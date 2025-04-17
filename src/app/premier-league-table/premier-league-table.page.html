@@ -14,6 +14,14 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- Error message -->
+  <ion-card *ngIf="errorMessage" color="danger" class="ion-padding">
+    <ion-card-header>
+      <ion-card-title>Error</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{ errorMessage }}</ion-card-content>
+  </ion-card>
+
   <ion-grid>
     <ion-row>
       <ion-col size="12" *ngFor="let team of standings">
