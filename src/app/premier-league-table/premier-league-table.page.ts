@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton, IonButtons } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton, IonButtons, IonCardContent } from '@ionic/angular/standalone';
 import { LeagueService } from '../league.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LeagueService } from '../league.service';
   templateUrl: './premier-league-table.page.html',
   styleUrls: ['./premier-league-table.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton, IonButtons]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonGrid, IonRow, IonCard, IonCol, IonCardHeader, IonCardTitle, IonBackButton, IonButtons, IonCardContent]
 })
 export class PremierLeagueTablePage implements OnInit {
 
