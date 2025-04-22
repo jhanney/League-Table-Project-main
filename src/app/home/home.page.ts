@@ -13,7 +13,7 @@ import { LeagueService } from '../league.service';
   imports: [IonHeader, IonToolbar, IonButton, RouterLink, IonCardTitle, IonCardSubtitle, IonTitle, IonContent, CommonModule, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonImg, IonLabel],
 })
 export class HomePage {
-  leagues =[{ id: 1, name: 'English Premier League', image: 'assets/images/premier-league.png', country:'England', route: '/premier-league-table' },
+  leagues =[{ id: 1, name: 'English Premier League', image: 'assets/images/prem-logo2.jpg', country:'England', route: '/premier-league-table' },
     { id: 2, name: 'Bundesliga', image: 'assets/images/bundesliga.png', country: 'Germany', route: '/bundesliga-table' },
     { id: 3, name: 'La Liga', image: 'assets/images/la-liga.png', country: 'Spain', route: '/la-liga-table' },
     { id: 4, name: 'Serie A', image: 'assets/images/serie-a.jpg', country: 'Italy', route: '/serie-a-table' }];

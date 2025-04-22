@@ -1,25 +1,78 @@
+ion-content {
+  --background: #75a4d3; /* light background color for better contrast */
+}
+
+ion-header ion-toolbar {
+  --background: #0c1752; 
+  --color:  #75a4d3; 
+}
+
 #container {
   text-align: center;
+  padding: 20px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 50%;
+  // transform: translateY(-50%);
 }
 
 #container strong {
-  font-size: 20px;
-  line-height: 26px;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #0c1752;
+  //line-height: 26px;
 }
 
 #container p {
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
-
+  color:  #0c1752;
   margin: 0;
+}
+
+.league-card {
+  border-radius: 20px; //rounded corners
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden; //stops overflow
+  transition: transform 0.3s, box-shadow 0.3s; //hover animation
+  margin-bottom: 16px;
+  
+  &:active {
+    transform: scale(0.98); //shrink card when clicked
+  }
+  
+  &:hover {
+    transform: translateY(-5px); //card lifts on hover
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); //shadow when hovering
+  }
+}
+
+img {
+    height: 140px; /* Fixed height for consistent card sizing */
+    width: 100%; 
+    object-fit: contain; // keep aspect ratio without cropping 
+    padding: 16px; //space around image
+    background: #f7f4f4; 
+}
+   
+ion-card-header {
+    background: #ffffff; 
+    text-align: center; 
+    padding: 12px; 
+}
+   
+ion-card-title {
+    font-size: 1.1rem; //slightly larger than default
+    font-weight: 600; //semi-bold
+}
+   
+ion-card-subtitle {
+    font-size: 0.9rem; //smaller than title
+    color: #666; 
 }
 
 #container a {
