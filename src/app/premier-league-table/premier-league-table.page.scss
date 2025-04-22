@@ -15,9 +15,38 @@ ion-content {
     overflow: hidden;
 }
 
-.team-logo {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    object-fit: contain;
-}
+.team-cell {
+    display: flex;
+    align-items: center;
+    
+    .team-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      object-fit: contain;
+    }
+    
+    .team-name {
+      font-weight: 500;
+      color: #2c3e50;
+    }
+  }
+
+  .points-cell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+
+  // relegeation and qulification indicators
+.champions-league {
+    border-left: 4px solid #3498db;
+  }
+  
+  .europa-league {
+    border-left: 4px solid #f39c12;
+  }
+  
+  .relegation {
+    border-left: 4px solid #e74c3c;
+  }
