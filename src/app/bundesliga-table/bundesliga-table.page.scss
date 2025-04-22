@@ -1,0 +1,124 @@
+ion-content {
+    --background: #f5f7fa;
+  }
+  
+  /* Bundesliga theme */
+  .bundesliga-theme {
+    --background: #d20515;
+    --color: white;
+  }
+  
+  .standings-card {
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .standings-grid {
+    padding: 0;
+  }
+  
+  .header-row {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    border-bottom: 2px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .team-row {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .position-cell {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .team-cell {
+    display: flex;
+    align-items: center;
+    
+    .team-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      object-fit: contain;
+    }
+    
+    .team-name {
+      font-weight: 500;
+      color: #2c3e50;
+    }
+  }
+  
+  .points-cell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  /* Position indicators */
+  .champions-league {
+    border-left: 4px solid #3498db;
+  }
+  
+  .europa-league {
+    border-left: 4px solid #f39c12;
+  }
+  
+  .conference-league {
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .relegation-playoff {
+    border-left: 4px solid #e67e22;
+  }
+  
+  .relegation {
+    border-left: 4px solid #e74c3c;
+  }
+
+  .legend-item {
+    display: flex;
+    flex-direction: row; //si it appears ina row
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; //to use all the width
+  }
+
+  .legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 12px;
+    
+    &.champions {
+      background: #3498db;
+    }
+    
+    &.europa {
+      background: #f39c12;
+    }
+    
+    &.conference {
+      background: #2ecc71;
+    }
+    
+    &.relegation-playoff {
+      background: #e67e22;
+    }
+    
+    &.relegation {
+      background: #e74c3c;
+    }
+  }
