@@ -1,0 +1,86 @@
+ion-content {
+    --background: #f5f7fa;
+  }
+  
+  //la liga theme
+  .la-liga-theme {
+    --background: #ee8707; //la liga orange
+    --color: white;
+  }
+  
+  .standings-card {
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .standings-grid {
+    padding: 0;
+  }
+  
+  .header-row {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    border-bottom: 2px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .team-row {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .position-cell {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .team-cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    .team-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      object-fit: contain;
+    }
+    
+    .team-name {
+      font-weight: 500;
+      color: #2c3e50;
+    }
+  }
+  
+  .points-cell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  //position indicators
+  .champions-league {
+    border-left: 4px solid #3498db;
+  }
+  
+  .europa-league {
+    border-left: 4px solid #f39c12;
+  }
+  
+  .conference-league {
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .relegation {
+    border-left: 4px solid #e74c3c;
+  }
