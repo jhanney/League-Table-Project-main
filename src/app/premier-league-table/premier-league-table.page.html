@@ -38,9 +38,17 @@
       </ion-row>
 
       <!-- team data -->
-      <ion-row *ngFor="let team of standings" class="team-row">
-        <ion-col size="1" class="ion-text-center">{{ team.position }}</ion-col>
-        <ion-col size="5">{{ team.team.name }}</ion-col>
+      <ion-row *ngFor="let team of standings" class="team-row"
+        [ngClass]="{
+          'champions-league': team.position <= 4,
+          'europa-league': team.position > 4 && team.position <= 6,
+          'relegation': team.position >= 18
+        }">
+        <ion-col size="1" class="ion-text-center position-cell">{{ team.position }}</ion-col>
+        <ion-col size="5" class="team-cell">
+          <img [src]="team.team.crest" alt="{{ team.team.name }}" class="team-logo">
+          <span class="team-name">{{ team.team.name }}</span>
+        </ion-col>
         <ion-col size="1" class="ion-text-center">{{ team.playedGames }}</ion-col>
         <ion-col size="1" class="ion-text-center">{{ team.won }}</ion-col>
         <ion-col size="1" class="ion-text-center">{{ team.draw }}</ion-col>
