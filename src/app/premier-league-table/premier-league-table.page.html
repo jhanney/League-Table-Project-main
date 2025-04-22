@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="premier-league-theme">
     <ion-buttons slot ="start">
       <ion-back-button defaultHref ="/home"></ion-back-button>
     </ion-buttons>
@@ -24,6 +24,7 @@
 
   <!-- league table -->
   <div *ngIf="!isLoading && !errorMessage">
+    <ion-card class="standings-card">
     <ion-grid class="standings-grid">
       <!-- table header -->
       <ion-row class="header-row">
@@ -57,5 +58,6 @@
         <ion-col size="1" class="ion-text-center"><strong>{{ team.points }}</strong></ion-col>
       </ion-row>
     </ion-grid>
+  </ion-card>
   </div>
 </ion-content>

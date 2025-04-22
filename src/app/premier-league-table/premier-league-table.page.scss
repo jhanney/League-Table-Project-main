@@ -1,0 +1,23 @@
+ion-content {
+    --background: #f5f7fa;
+  }
+
+//premier league colour theme
+.premier-league-theme {
+    --background: #38003c;
+    --color: white;
+  }
+
+.standings-card {
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.team-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    object-fit: contain;
+}
