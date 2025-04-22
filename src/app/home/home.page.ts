@@ -14,8 +14,8 @@ import { LeagueService } from '../league.service';
 })
 export class HomePage {
   leagues =[{ id: 1, name: 'English Premier League', image: 'assets/images/prem-logo2.jpg', country:'England', route: '/premier-league-table' },
-    { id: 2, name: 'Bundesliga', image: 'assets/images/bundesliga.png', country: 'Germany', route: '/bundesliga-table' },
-    { id: 3, name: 'La Liga', image: 'assets/images/la-liga.png', country: 'Spain', route: '/la-liga-table' },
+    { id: 2, name: 'Bundesliga', image: 'assets/images/bundesliga-logo2.jpg', country: 'Germany', route: '/bundesliga-table' },
+    { id: 3, name: 'La Liga', image: 'assets/images/la-liga-logo2.jpg', country: 'Spain', route: '/la-liga-table' },
     { id: 4, name: 'Serie A', image: 'assets/images/serie-a.jpg', country: 'Italy', route: '/serie-a-table' }];
   
     constructor(private leagueService : LeagueService){ //handles API call
