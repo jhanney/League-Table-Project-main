@@ -50,3 +50,38 @@ ion-content {
   .relegation {
     border-left: 4px solid #e74c3c;
   }
+
+  //legend card
+.legend-card {
+    margin: 16px;
+    border-radius: 16px;
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .legend-color {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        margin-right: 12px;
+        
+        &.champions {
+          background: #3498db;
+        }
+        
+        &.europa {
+          background: #f39c12;
+        }
+        
+        &.relegation {
+          background: #e74c3c;
+        }
+      }
+    }
+  }
