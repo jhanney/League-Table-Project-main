@@ -43,3 +43,84 @@ ion-content {
     font-weight: 600;
     font-size: 1rem;
   }
+
+  .team-cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    .team-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      object-fit: contain;
+    }
+    
+    .team-name {
+      font-weight: 500;
+      color: #2c3e50;
+    }
+  }
+  
+  .points-cell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  //psoition indicators
+  .champions-league {
+    border-left: 4px solid #3498db;
+  }
+  
+  .europa-league {
+    border-left: 4px solid #f39c12;
+  }
+  
+  .conference-league {
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .relegation {
+    border-left: 4px solid #e74c3c;
+  }
+
+  //legend card
+.legend-card {
+    margin: 16px;
+    border-radius: 16px;
+  }
+  
+  .legend-item {
+    display: flex;
+    flex-direction: row; // forces horizontal layout
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; //ensures full width
+  }
+  
+  .legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    min-width: 16px; //prevents shrinking
+    margin-right: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  
+  .legend-color.champions {
+    background: #3498db;
+  }
+  
+  .legend-color.europa {
+    background: #f39c12;
+  }
+  
+  .legend-color.conference {
+    background: #2ecc71;
+  }
+  
+  .legend-color.relegation {
+    background: #e74c3c;
+  }
