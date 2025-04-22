@@ -1,0 +1,45 @@
+ion-content {
+    --background: #f5f7fa;
+  }
+  
+  //serie a theme 
+  .serie-a-theme {
+    --background: #008fd7; //serie a blue
+    --color: white;
+  }
+  
+  .standings-card {
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .standings-grid {
+    padding: 0;
+  }
+  
+  .header-row {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    border-bottom: 2px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .team-row {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 0;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .position-cell {
+    font-weight: 600;
+    font-size: 1rem;
+  }
