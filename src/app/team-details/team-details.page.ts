@@ -21,7 +21,7 @@ export class TeamDetailsPage implements OnInit {
   errorMessage: string = '';
 
   constructor(private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute, //injecting this allows us to acces values from the URL, in this case team ID
     private leagueService: LeagueService) { }
 
   ngOnInit() {
@@ -35,7 +35,6 @@ export class TeamDetailsPage implements OnInit {
       this.teamData = navigation.extras.state['teamData'];
     }
     
-    //load the info
     this.loadTeamDetails();
   }
 
@@ -55,5 +54,4 @@ export class TeamDetailsPage implements OnInit {
       }
     });
   }
-
 }

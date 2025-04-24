@@ -44,13 +44,16 @@
       </ion-row>
 
       <!-- team data -->
-      <ion-row *ngFor="let team of standings" class="team-row"
+      <ion-item *ngFor="let team of standings" class="team-row"
         [ngClass]="{
           'champions-league': team.position <= 4,
           'europa-league': team.position === 5,
           'conference-league': team.position === 6,
           'relegation': team.position >= 18
-        }">
+        }"
+        [routerLink]="['/team-details', team.team.id]"
+        [state]="{ teamData: team }"
+        style="cursor: pointer;">
         <ion-col size="1" class="ion-text-center position-cell">{{ team.position }}</ion-col>
         <ion-col size="5" class="team-cell">
           <img [src]="team.team.crest" alt="{{ team.team.name }}" class="team-logo">
@@ -62,7 +65,7 @@
         <ion-col size="1" class="ion-text-center">{{ team.lost }}</ion-col>
         <ion-col size="1" class="ion-text-center">{{ team.goalDifference }}</ion-col>
         <ion-col size="1" class="ion-text-center"><strong>{{ team.points }}</strong></ion-col>
-      </ion-row>
+      </ion-item>
     </ion-grid>
   </ion-card>
 
