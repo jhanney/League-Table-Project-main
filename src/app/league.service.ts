@@ -16,4 +16,10 @@ export class LeagueService {
     const url = `${this.apiUrl}${competitionId}/standings`;
     return this.http.get<any>(url, { headers });
   }
+
+  getTeamDetails(teamId: string): Observable<any> {
+    const headers = { 'X-Auth-Token': '1b549516cbe346209b2c648fa4643c66' };
+    const url = '/api/teams/${teamId}';
+    return this.http.get<any>(url, { headers });
+  }
 }
