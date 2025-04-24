@@ -2,6 +2,12 @@ ion-content {
     --background: #f5f7fa;
   }
 
+  .share-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
 //premier league colour theme
 .premier-league-theme {
     --background: #38003c;
@@ -95,3 +101,5 @@ ion-content {
       }
     }
   }
+
+ 
