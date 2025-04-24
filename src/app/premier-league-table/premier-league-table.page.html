@@ -4,8 +4,14 @@
       <ion-back-button defaultHref ="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Premier League Standings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="shareStandings()">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> 
+
 
 <ion-content>
   <ion-header collapse="condense">
