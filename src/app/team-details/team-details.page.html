@@ -1,13 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>team-details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/premier-league-table"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ teamData?.team?.name || teamDetails?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">team-details</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+
+  <!-- Team details -->
+  <div *ngIf="!isLoading && !errorMessage">
+    <ion-card>
+      <div style="text-align: center; padding: 20px;">
+        <img [src]="teamData?.team?.crest || teamDetails?.crest" style="max-width: 120px;">
+        <h1>{{ teamData?.team?.name || teamDetails?.name }}</h1>
+      </div>
+      
+      <ion-card-content>
+        <!-- General team info -->
+        <div *ngIf="teamDetails">
+          <h2>Team Info</h2>
+          <p><strong>Founded:</strong> {{ teamDetails.founded }}</p>
+          <p><strong>Stadium:</strong> {{ teamDetails.venue }}</p>
+          <p><strong>Club Colors:</strong> {{ teamDetails.clubColors }}</p>
+          <p><strong>Website:</strong> {{ teamDetails.website }}</p>
+        </div>
+        
+        <!-- Current season stats -->
+        <div *ngIf="teamData">
+          <h2>Season Stats</h2>
+          <p><strong>Position:</strong> {{ teamData.position }}</p>
+          <p><strong>Points:</strong> {{ teamData.points }}</p>
+          <p><strong>Record:</strong> {{ teamData.won }}W / {{ teamData.draw }}D / {{ teamData.lost }}L</p>
+          <p><strong>Goals:</strong> {{ teamData.goalsFor }} scored, {{ teamData.goalsAgainst }} conceded</p>
+          <p><strong>Goal Difference:</strong> {{ teamData.goalDifference }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
