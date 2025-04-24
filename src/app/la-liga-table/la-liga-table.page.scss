@@ -84,3 +84,48 @@ ion-content {
   .relegation {
     border-left: 4px solid #e74c3c;
   }
+
+  .error-card {
+    margin: 16px;
+    border-radius: 16px;
+  }
+  
+  //legend
+  .legend-card {
+    margin: 16px;
+    border-radius: 16px;
+  }
+  
+  .legend-item {
+    display: flex;
+    flex-direction: row; //force horizontal layout
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; //ensure full with
+  }
+  
+  .legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    min-width: 16px; //stop shrinking
+    margin-right: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  
+  .legend-color.champions {
+    background: #3498db;
+  }
+  
+  .legend-color.europa {
+    background: #f39c12;
+  }
+  
+  .legend-color.conference {
+    background: #2ecc71;
+  }
+  
+  .legend-color.relegation {
+    background: #e74c3c;
+  }
