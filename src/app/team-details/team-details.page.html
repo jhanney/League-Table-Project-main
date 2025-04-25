@@ -4,6 +4,11 @@
       <ion-back-button defaultHref="/premier-league-table"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ teamData?.team?.name || teamDetails?.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleFavourite()">
+        <ion-icon [name]="isFavourite ? 'star' : 'star-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -15,6 +20,12 @@
         <img [src]="teamData?.team?.crest || teamDetails?.crest" style="max-width: 120px;">
         <h1>{{ teamData?.team?.name || teamDetails?.name }}</h1>
       </div>
+
+        <!-- Add favorite status display -->
+    <ion-item lines="none">
+      <ion-label>Favourite Team</ion-label>
+      <ion-toggle [(ngModel)]="isFavourite" (ionChange)="toggleFavourite()"></ion-toggle>
+    </ion-item>
       
       <ion-card-content>
         <!-- General team info -->

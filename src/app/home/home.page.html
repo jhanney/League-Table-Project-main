@@ -13,6 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- Team search with two-way data binding -->
+<div class="search-container ion-padding">
+  <h2>Find your team</h2>
+  <!-- Two-way data binding with ngModel -->
+  <ion-searchbar [(ngModel)]="teamSearch" placeholder="Enter a Premier League team name"></ion-searchbar>
+  <ion-button expand="block" (click)="searchTeam()" [disabled]="isLoadingTeams || !teamSearch.trim()">
+    Search Team
+  </ion-button>
+</div>
+
   <div id="container">
     <strong>Take a look at the top football leagues:</strong>
     <ion-grid>
